@@ -1,5 +1,11 @@
 -module(lab2).
--export([area/1,len/1,amin/1,amax/1]).
+-export([
+    area/1,
+    len/1,
+    amin/1,
+    amax/1,
+    tmin_max/1
+]).
  
 % area
 area({rect,X,Y}) ->
@@ -31,3 +37,6 @@ amax([],Min) -> Min;
 amax([H|Tail],Min) when H>Min -> amax(Tail,H);
 amax([_|Tail],Min) -> amax(Tail,Min).
 
+% list min max
+tmin_max([]) -> ok;
+tmin_max(List) -> {amin(List),amax(List)}.
