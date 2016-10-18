@@ -1,5 +1,5 @@
 -module(lab2).
--export([area/1,len/1,lmin/1]).
+-export([area/1,len/1,amin/1]).
  
 % area
 area({rect,X,Y}) ->
@@ -16,10 +16,10 @@ len([],Len) -> Len;
 len([_|Tail],Len) -> len(Tail,Len+1). 
 
 % list min elem
-lmin([]) -> ok;
-lmin(List) -> lmin(List,ok).
+amin([]) -> ok;
+amin(List) -> amin(List,ok).
 
-lmin([H|Tail],ok) -> lmin(Tail,H);
-lmin([],Min) -> Min;
-lmin([H|Tail],Min) when H<Min -> lmin(Tail,H);
-lmin([_|Tail],Min) -> lmin(Tail,Min).
+amin([H|Tail],ok) -> amin(Tail,H);
+amin([],Min) -> Min;
+amin([H|Tail],Min) when H<Min -> amin(Tail,H);
+amin([_|Tail],Min) -> amin(Tail,Min).
