@@ -4,7 +4,8 @@
     len/1,
     amin/1,
     amax/1,
-    tmin_max/1
+    tmin_max/1,
+    lmin_max/1
 ]).
  
 % area
@@ -40,3 +41,7 @@ amax([_|Tail],Min) -> amax(Tail,Min).
 % list min max
 tmin_max([]) -> ok;
 tmin_max(List) -> {amin(List),amax(List)}.
+
+% list min max as list
+lmin_max([]) -> [];
+lmin_max(List) -> [amin(List),amax(List)].
