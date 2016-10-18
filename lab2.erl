@@ -5,7 +5,8 @@
     amin/1,
     amax/1,
     tmin_max/1,
-    lmin_max/1
+    lmin_max/1,
+    areas/1
 ]).
  
 % area
@@ -45,3 +46,7 @@ tmin_max(List) -> {amin(List),amax(List)}.
 % list min max as list
 lmin_max([]) -> [];
 lmin_max(List) -> [amin(List),amax(List)].
+
+% list of areas
+areas([]) -> [];
+areas(List) -> lists:map(fun(K)->area(K) end,List).
