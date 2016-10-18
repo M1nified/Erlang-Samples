@@ -6,7 +6,8 @@
     amax/1,
     tmin_max/1,
     lmin_max/1,
-    areas/1
+    areas/1,
+    cd/1
 ]).
  
 % area
@@ -50,3 +51,7 @@ lmin_max(List) -> [amin(List),amax(List)].
 % list of areas
 areas([]) -> [];
 areas(List) -> lists:map(fun(K)->area(K) end,List).
+
+% count down
+cd(1) -> [1];
+cd(Num) -> [Num] ++ cd(Num-1).
