@@ -35,7 +35,6 @@ convert_con(Val,In,Out) ->
     end,
     Score.
 
-
 convert_con_thread()->
     receive
         {Parent,Safe,Val,In,Out} ->
