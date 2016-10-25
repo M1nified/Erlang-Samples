@@ -1,11 +1,11 @@
--module(zad1).
+-module(qsort).
 -export([
     randlist/1,
     qsort_seq/1,
+    qsort_concurrent/1,
     benchmark_sort_seq/0,
     benchmark_sort_conc/0,
-    benchmark_sort_both/0,
-    qsort_concurrent/1
+    benchmark_sort_both/0
 ]).
 
 % list lenght
