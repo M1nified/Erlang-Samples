@@ -7,7 +7,7 @@
 
 listen() -> 
     receive 
-        Any -> io:fwrite("sth\n"),
+        _ -> io:fwrite("sth\n"),
         listen()
     after 
         2000 -> io:fwrite("daly\n")
