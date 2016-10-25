@@ -59,14 +59,14 @@ qsort_concurrent(List) ->
     ListSorted.
 
 benchmark_sort_seq()->
-    benchmark:test_avg(zad1,qsort_seq,[randlist(100)],10).
+    benchmark:test_avg(qsort,qsort_seq,[randlist(100)],10).
 
 benchmark_sort_conc() ->
-    benchmark:test_avg(zad1,qsort_concurrent,[randlist(10)],10).
+    benchmark:test_avg(qsort,qsort_concurrent,[randlist(10)],10).
 
 benchmark_sort_both() ->
     List = randlist(100000),
     io:fwrite("Sequential:\n"),
-    benchmark:test_avg(zad1,qsort_seq,[List],10),
+    benchmark:test_avg(qsort,qsort_seq,[List],10),
     io:fwrite("Concurrent:\n"),
-    benchmark:test_avg(zad1,qsort_concurrent,[List],10).
+    benchmark:test_avg(qsort,qsort_concurrent,[List],10).

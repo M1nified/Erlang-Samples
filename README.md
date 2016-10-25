@@ -1,5 +1,11 @@
 # Erlang-Samples
 
+## TL;DR
+
+``` bash
+./run.sh
+```
+
 ## Compile
 
 ``` bash
@@ -8,6 +14,6 @@ erl -make
 
 ## Run
 
-```bash
+``` bash
 erl -pa ebin
 ```
