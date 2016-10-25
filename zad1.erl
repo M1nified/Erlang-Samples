@@ -6,13 +6,13 @@
 ]).
 
 % list lenght
-len([]) -> 0;
-len(List) -> len(List,0).
+% len([]) -> 0;
+% len(List) -> len(List,0).
 
-len([],Len) -> Len;
-len([_|Tail],Len) -> len(Tail,Len+1). 
+% len([],Len) -> Len;
+% len([_|Tail],Len) -> len(Tail,Len+1). 
 
-randlist(Num) -> [rand:uniform(100) || _ <- lists:seq(1, Num)].
+randlist(Num) -> [random:uniform(100) || _ <- lists:seq(1, Num)].
 
 qsort([]) -> [];
 qsort([Pivot|T]) ->
