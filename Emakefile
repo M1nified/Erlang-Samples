@@ -5,3 +5,10 @@
     {outdir, './ebin'}
   ]
 }.
+{
+  './test/*',
+  [
+    debug_info,
+    {outdir, './ebin'}
+  ]
+}.
