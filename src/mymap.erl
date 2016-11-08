@@ -1,7 +1,7 @@
 -module(mymap).
 -export([
     mymap/2,
-    call/0
+    example/1
 ]).
 
 %-spec map()
@@ -41,5 +41,7 @@ map2() ->
 
 f(X) ->
     X + 2.
-call() ->
-    mymap(fun f/1, [1,2,3,4]).
+example(a) ->
+    mymap(fun f/1, [1,2,3,4]);
+example(b) ->
+    mymap(fun (X) -> X + 2 end, [1,2,3,4]).
