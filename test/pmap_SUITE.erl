@@ -1,4 +1,4 @@
--module(pmap_test).
+-module(pmap_SUITE).
 -include_lib("eunit/include/eunit.hrl").
 
 pmap__1_test() ->
