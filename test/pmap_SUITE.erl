@@ -7,4 +7,4 @@ pmap__1_test() ->
 pmap__2_test() ->
     {error, badarith} = pmap:pmap(fun (X) -> X + 2 end, [1,2,"w",4]).
 pmap__3_test() ->
-    {error, {badfun,3}} = pmap:pmap(2, [1,2,3,4]).
+    {error, {badfun,2}} = pmap:pmap(2, [1,2,3,4]).
