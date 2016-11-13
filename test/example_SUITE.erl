@@ -14,4 +14,4 @@ example_3_test() ->
     ].
 
 example_4_test() ->
-    ?assertNot( true ).
+    ?assertNot( false ).
