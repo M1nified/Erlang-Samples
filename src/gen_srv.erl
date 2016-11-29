@@ -66,6 +66,9 @@ recv(Loop,{save, From, Ref}) when is_pid(From) and is_reference(Ref) ->
     JM:state_save(Loop#loopobj.state),
     loop(Loop#loopobj{lastsavetime=get_timestamp()});
 
+recv(_,{close,_,_}) ->
+    ok;
+
 recv(Loop,_) ->
     io:fwrite("Unknown command!\n"),
     loop(Loop).
