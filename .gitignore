@@ -8,4 +8,4 @@ rel/example_project
 .concrete/DEV_MODE
 .rebar
 
-gen_srv_state
+*_state_ignore
