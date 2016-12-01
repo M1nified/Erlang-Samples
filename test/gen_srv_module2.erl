@@ -6,7 +6,7 @@
     state_save/1
 ]).
 
--define(STATE_FILE,"gen_srv_module1_state_ignore").
+-define(STATE_FILE,"gen_srv_module2_state_ignore").
 
 action(Data,State) ->
     {module2action,{stare,Data},{state,State}}.
@@ -17,12 +17,11 @@ state(_,_) ->
     0.
 
 state_load() ->
-    case file:read_file(?STATE_FILE) of
-        {ok, Binary} ->
-            {ok, binary_to_term(Binary)};
-        {error, Reason} ->
-            {error, Reason}
-    end.
+    test_suite ! {called, {state_load,[]}},
+    {error, test}.
 
-state_save(State) ->
-    file:write_file(?STATE_FILE,term_to_binary(State)).
+state_save(_) ->
+    {error, test}.
+    
+    
+% test_suite ! test,

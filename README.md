@@ -26,4 +26,4 @@ erl -pa ebin
 ./test.sh
 ```
 
-This script runs `eunit:test/2` function for all compiled modules named `*_SUITE`.
+This script runs `eunit:test/2` function for all compiled modules.
